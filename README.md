@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+A flutter project of Invest App, assignment given by Sir Salman (Instructor Bano Qabil). Figma Design Link :
 
 A few resources to get you started if this is your first Flutter project:
 
