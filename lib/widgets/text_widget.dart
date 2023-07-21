@@ -10,7 +10,7 @@ class ShowText extends StatelessWidget {
     super.key,
     required this.textName,
     required this.fontsize,
-    required this.fontColor,
+    this.fontColor = const Color(0xff000000),
     this.textAlign,
   });
   @override

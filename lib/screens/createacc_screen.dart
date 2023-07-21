@@ -19,7 +19,7 @@ class _CreatAccScreenState extends State<CreatAccScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ShowAppBar(
-        leadingIcon: Icons.arrow_back_ios,
+        leadingIcon: Icons.arrow_back_ios_new_rounded,
         callback: () {
           Navigator.pop(context);
         },
@@ -28,16 +28,16 @@ class _CreatAccScreenState extends State<CreatAccScreen> {
         child: Column(
           children: [
             const ShowText(
-                textName: 'Create an account',
-                fontsize: 34,
-                fontColor: Color(0xff000000)),
+              textName: 'Create an account',
+              fontsize: 34,
+            ),
             const ShowDescripText(
                 textName: 'Invest and double your income now',
                 fontsize: 17,
                 fontColor: Color(0xff4F4F4F)),
             Container(
               margin: const EdgeInsets.only(
-                  top: 87, left: 24, right: 25, bottom: 38),
+                  top: 87, left: 35, right: 35, bottom: 38),
               child: Column(
                 children: [
                   const ShowTextField(

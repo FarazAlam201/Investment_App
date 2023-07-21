@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:invest_app/screens/createacc_screen.dart';
+// ignore: unused_import
 import 'package:invest_app/screens/home_screen.dart';
 import 'package:invest_app/widgets/appbar_widget.dart';
+import 'package:invest_app/widgets/bottombar.dart';
 import 'package:invest_app/widgets/custom_button.dart';
 import 'package:invest_app/widgets/descriptext_widget.dart';
 import 'package:invest_app/widgets/text_button.dart';
@@ -20,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ShowAppBar(
-        leadingIcon: Icons.arrow_back_ios,
+        leadingIcon: Icons.arrow_back_ios_new_rounded,
         callback: () {
           Navigator.pop(context);
         },
@@ -29,16 +31,16 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             const ShowText(
-                textName: 'Login account',
-                fontsize: 34,
-                fontColor: Color(0xff000000)),
+              textName: 'Login account',
+              fontsize: 34,
+            ),
             const ShowDescripText(
                 textName: 'Invest and double your income now',
                 fontsize: 17,
                 fontColor: Color(0xff4F4F4F)),
             Container(
               margin: const EdgeInsets.only(
-                  top: 87, left: 24, right: 25, bottom: 38),
+                  top: 87, left: 35, right: 35, bottom: 38),
               child: Column(
                 children: [
                   const Padding(
@@ -91,6 +93,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void toHomePage(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+        context, MaterialPageRoute(builder: (context) => ShowBottomBAr()));
   }
 }

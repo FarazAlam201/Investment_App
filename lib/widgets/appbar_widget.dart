@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/widgets/descriptext_widget.dart';
 
 class ShowAppBar extends StatelessWidget implements PreferredSizeWidget {
   final IconData? leadingIcon;
+  final String titleName;
   final IconData? actionIcon;
   final Color? iconColor;
   final double? leadingIconSize;
@@ -11,6 +13,7 @@ class ShowAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ShowAppBar({
     Key? key,
     required this.leadingIcon,
+    this.titleName = '',
     this.actionIcon,
     this.iconColor = const Color(0xff000000),
     this.leadingIconSize,
@@ -25,6 +28,17 @@ class ShowAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
       elevation: 0,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ShowDescripText(
+            textName: titleName,
+            fontsize: 17,
+            fontColor: const Color(0xff000000),
+            fontWeight: FontWeight.w600,
+          ),
+        ],
+      ),
       leading: Padding(
         padding: const EdgeInsets.only(left: 20),
         child: IconButton(
@@ -32,6 +46,8 @@ class ShowAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(leadingIcon),
           iconSize: leadingIconSize,
           color: iconColor,
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
         ),
       ),
       actions: [
@@ -42,6 +58,8 @@ class ShowAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: Icon(actionIcon),
             iconSize: leadingIconSize,
             color: iconColor,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
           ),
         ),
       ],

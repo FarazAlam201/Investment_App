@@ -27,7 +27,7 @@ class ShowTextField extends StatelessWidget {
           color: Color(0xff828282),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xff31A062)),
+          borderSide: const BorderSide(color: Color(0xff31A062), width: 2.0),
           borderRadius: BorderRadius.circular(20),
         ),
         enabledBorder: OutlineInputBorder(
